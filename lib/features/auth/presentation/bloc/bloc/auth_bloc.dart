@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import '../../../../../core/errors/failures.dart';
@@ -18,6 +19,7 @@ import '../../../domain/usecases/change_password.dart';
 part 'auth_event.dart';
 part 'auth_state.dart';
 
+@injectable
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final Login loginUseCase;
   final Register registerUseCase;

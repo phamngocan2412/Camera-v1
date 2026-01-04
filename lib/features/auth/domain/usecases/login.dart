@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import '../../../../core/errors/failures.dart';
@@ -5,6 +6,7 @@ import '../../../../core/usecases/usecase.dart';
 import '../entities/user.dart';
 import '../reponsitories/auth_repository.dart';
 
+@lazySingleton
 class Login implements UseCase<User, LoginParams> {
   final AuthRepository repository;
 

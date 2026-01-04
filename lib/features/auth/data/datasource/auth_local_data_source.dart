@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../model/user_model.dart';
@@ -8,6 +9,7 @@ abstract class AuthLocalDataSource {
   Future<void> clearCache();
 }
 
+@LazySingleton(as: AuthLocalDataSource)
 class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   final SharedPreferences sharedPreferences;
 

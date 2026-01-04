@@ -1,8 +1,10 @@
+import 'package:injectable/injectable.dart';
 import 'package:dartz/dartz.dart';
 import '../../../../core/errors/failures.dart';
 import '../../domain/entities/user.dart';
 import '../../domain/reponsitories/auth_repository.dart';
 
+@lazySingleton
 class CheckAuthStatus {
   final AuthRepository repository;
 

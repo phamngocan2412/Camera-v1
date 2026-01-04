@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
@@ -28,6 +29,7 @@ abstract class AuthRemoteDataSource {
   );
 }
 
+@LazySingleton(as: AuthRemoteDataSource)
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   final http.Client client;
 

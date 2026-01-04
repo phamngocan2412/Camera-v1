@@ -1,9 +1,11 @@
+import 'package:injectable/injectable.dart';
 import 'package:dartz/dartz.dart';
 import '../../../../core/errors/failures.dart';
 import '../../../../core/usecases/usecase.dart';
 import '../reponsitories/auth_repository.dart';
 import 'package:equatable/equatable.dart';
 
+@lazySingleton
 class ChangePassword implements UseCase<void, ChangePasswordParams> {
   final AuthRepository repository;
 

@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 // Giao diện quy định
@@ -6,6 +7,9 @@ abstract class NetworkInfo {
 }
 
 // Lớp cài đặt cụ thể
+
+// Lớp cài đặt cụ thể
+@LazySingleton(as: NetworkInfo)
 class NetworkInfoImpl implements NetworkInfo {
   final Connectivity connectivity;
 
