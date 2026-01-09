@@ -163,4 +163,3 @@ app.*.symbols
 !/dev/ci/**/Gemfile.lock
 # Agent
 .agent/
-CONTINUITY.md
